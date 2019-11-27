@@ -4,6 +4,7 @@ from models.recipe import Recipe
 app = create_app()
 
 user = User(username='jack', email='jack@gmail.com', password='WkQa')
+app.app_context().push()
 db.session.add(user)
 db.session.commit()
 
